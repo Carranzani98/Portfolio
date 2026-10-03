@@ -90,15 +90,17 @@ export const portfolioData: PortfolioData = {
       title: "KeepTalking",
       description:
         "Language-exchange web app built as my final Master's project. Full-stack, with separate backend and frontend code and a Docker Compose setup.",
-      tags: ["React", "TypeScript", "Mantine UI", "PHP", "Docker"],
+      tags: ["React", "TypeScript", "Mantine UI", "PHP", "Docker", "MySQL"],
       repoUrl: "https://github.com/Carranzani98/KeepTalking",
+      image: {src: "/keeptalking-project.png", alt: "KeepTalking project"}
     },
     {
       title: "This portfolio",
       description:
         "My personal site: a Next.js App Router project with a data-driven content file, class-based dark mode, and a contact form backed by a Server Action.",
       tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-      repoUrl: "https://github.com/Carranzani98/Portfolio"
+      repoUrl: "https://github.com/Carranzani98/Portfolio",
+      image: {src: "/portfolio-project.png", alt: 'Portfolio project'}
     },
   ],
 };
