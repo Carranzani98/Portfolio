@@ -10,7 +10,7 @@ export const portfolioData: PortfolioData = {
     email: "icabo1598@gmail.com",
     cvUrl: "/cv.pdf",
     contactIntro: "Questions, collaborations, or a chat about frontend work: send a message or find me on LinkedIn.",
-    avatarUrl: '/avatar.jpeg',
+    avatarUrl: '/avatar.png',
   },
   socials: [
     { platform: "github", label: "GitHub", url: "https://github.com/Carranzani98" },
