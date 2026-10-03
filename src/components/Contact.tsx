@@ -26,7 +26,7 @@ export default function Contact({
                     target: "_blank",
                     rel: "noopener noreferrer",
                   })}
-                  className="inline-flex items-center gap-3 hover:text-indigo-600 dark:hover:text-indigo-400"
+                  className="inline-flex items-center gap-3 hover:text-brand-700 dark:hover:text-brand-400"
                 >
                   <SocialIcon platform={s.platform} className="h-5 w-5" />
                   {s.platform === "email" ? personal.email : s.label}

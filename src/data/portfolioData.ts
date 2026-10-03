@@ -10,6 +10,7 @@ export const portfolioData: PortfolioData = {
     email: "icabo1598@gmail.com",
     cvUrl: "/cv.pdf",
     contactIntro: "Questions, collaborations, or a chat about frontend work: send a message or find me on LinkedIn.",
+    avatarUrl: '/avatar.jpeg',
   },
   socials: [
     { platform: "github", label: "GitHub", url: "https://github.com/Carranzani98" },
@@ -17,12 +18,12 @@ export const portfolioData: PortfolioData = {
     { platform: "email", label: "Email", url: "mailto:icabo1598@gmail.com" },
   ],
   skills: [
-    { category: "Programming", skills: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / SCSS", "Python"] },
-    { category: "Frameworks & Libraries", skills: ["React", "Redux", "Preact", "Oracle JET", "AngularJS"] },
-    { category: "Testing", skills: ["Jest", "React Testing Library", "Enzyme", "E2E Testing"] },
-    { category: "Design Systems & UI", skills: ["Storybook", "Chromatic", "Figma", "Component Libraries"] },
-    { category: "Tools & AI", skills: ["Git", "Jenkins", "JIRA", "GitHub Copilot", "Codex", "ChatGPT", "Gemini"] },
-    { category: "Spoken Languages", skills: ["English (advanced)", "Spanish (native)", "Catalan (native)"] },
+    { category: "Programming",icon: "code", skills: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / SCSS", "Python"] },
+    { category: "Frameworks & Libraries",icon: "layers", skills: ["React", "Redux", "Preact", "Oracle JET", "AngularJS"] },
+    { category: "Testing", icon: "test", skills: ["Jest", "React Testing Library", "Enzyme", "E2E Testing"] },
+    { category: "Design Systems & UI", icon: "design", skills: ["Storybook", "Chromatic", "Figma", "Component Libraries"] },
+    { category: "Tools & AI", icon: "tools",skills: ["Git", "Jenkins", "JIRA", "GitHub Copilot", "Codex", "ChatGPT", "Gemini"] },
+    { category: "Spoken Languages", icon: "languages", skills: ["English (advanced)", "Spanish (native)", "Catalan (native)"] },
   ],
   timeline: [
     {
@@ -30,6 +31,7 @@ export const portfolioData: PortfolioData = {
       title: "Software Engineer (Frontend)",
       organization: "Oracle NetSuite",
       period: "Jul 2024 – Present",
+      current: true,
       highlights: [
         "Own the Record List Template and Smart Filters, core UI components used across the platform.",
         "Deliver features end to end, covering development plus unit and E2E testing.",
@@ -88,8 +90,7 @@ export const portfolioData: PortfolioData = {
       title: "KeepTalking",
       description:
         "Language-exchange web app built as my final Master's project. Full-stack, with separate backend and frontend code and a Docker Compose setup.",
-      // TODO: Add more info
-      tags: ["PHP", "Docker"],
+      tags: ["React", "TypeScript", "Mantine UI", "PHP", "Docker"],
       repoUrl: "https://github.com/Carranzani98/KeepTalking",
     },
     {
@@ -97,7 +98,7 @@ export const portfolioData: PortfolioData = {
       description:
         "My personal site: a Next.js App Router project with a data-driven content file, class-based dark mode, and a contact form backed by a Server Action.",
       tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-      // TODO: add repoUrl once deployed
+      repoUrl: "https://github.com/Carranzani98/Portfolio"
     },
   ],
 };

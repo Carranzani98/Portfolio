@@ -6,7 +6,8 @@ export interface PersonalInfo {
   location: string;
   email: string;
   cvUrl: string;
-  contactIntro: string; 
+  contactIntro: string;
+  avatarUrl?: string; 
 }
 
 export type SocialPlatform = "github" | "linkedin" | "email" | "website";
@@ -17,8 +18,10 @@ export interface SocialLink {
   url: string;
 }
 
+export type SkillIcon = "code" | "layers" | "test" | "design" | "tools" | "languages";
 export interface SkillCategory {
   category: string;
+  icon: SkillIcon;
   skills: string[];
 }
 
@@ -28,6 +31,7 @@ export interface TimelineItem {
   organization: string;
   period: string;
   highlights: string[];
+  current?: boolean;
 }
 
 export interface Project {
@@ -36,6 +40,7 @@ export interface Project {
   tags: string[];
   repoUrl?: string;
   demoUrl?: string;
+  image?: { src: string; alt: string };
 }
 
 export interface PortfolioData {
