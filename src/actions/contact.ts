@@ -7,10 +7,14 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const GENERIC_ERROR: ContactState = {
   status: "error",
-  message: "Something went wrong sending your message. Please try again or email me directly.",
+  message:
+    "Something went wrong sending your message. Please try again or email me directly.",
 };
 
-export async function sendContactMessage(_prev: ContactState, formData: FormData): Promise<ContactState> {
+export async function sendContactMessage(
+  _prev: ContactState,
+  formData: FormData,
+): Promise<ContactState> {
   // Honeypot: real users never see this field. Pretend success so bots don't adapt.
   if (String(formData.get("hp") ?? "") !== "") {
     return { status: "success", message: "Thanks, your message was sent." };
@@ -33,21 +37,31 @@ export async function sendContactMessage(_prev: ContactState, formData: FormData
     fieldErrors.message = "Message must be 10 to 5000 characters.";
   }
   if (Object.keys(fieldErrors).length > 0) {
-    return { status: "error", message: "Please fix the highlighted fields.", fieldErrors, values };
+    return {
+      status: "error",
+      message: "Please fix the highlighted fields.",
+      fieldErrors,
+      values,
+    };
   }
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;
   const from = process.env.CONTACT_FROM_EMAIL;
   if (!apiKey || !to || !from) {
-    console.error("Contact form: missing RESEND_API_KEY, CONTACT_TO_EMAIL or CONTACT_FROM_EMAIL");
+    console.error(
+      "Contact form: missing RESEND_API_KEY, CONTACT_TO_EMAIL or CONTACT_FROM_EMAIL",
+    );
     return { ...GENERIC_ERROR, values };
   }
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
-      headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         from,
         to,
@@ -58,7 +72,11 @@ export async function sendContactMessage(_prev: ContactState, formData: FormData
     });
 
     if (!res.ok) {
-      console.error("Contact form: Resend responded", res.status, await res.text());
+      console.error(
+        "Contact form: Resend responded",
+        res.status,
+        await res.text(),
+      );
       return { ...GENERIC_ERROR, values };
     }
   } catch (err) {

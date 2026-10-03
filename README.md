@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Personal portfolio and interactive CV for Isabella Carranzani Borot, a frontend engineer.
 
-First, run the development server:
+**Live site:** https://portfolio-isa-8478.vercel.app
+
+![Portfolio screenshot](public/portfolio-project.png)
+
+## Stack
+
+- Next.js (App Router), React, TypeScript
+- Tailwind CSS
+- Lucide React and react-icons for icons
+- Resend, called from a Next.js Server Action, for the contact form
+- Deployed on Vercel
+
+## Features
+
+- All content lives in one typed data file, so no component code changes when the CV changes
+- Class-based dark mode with the preference saved to `localStorage` and no theme flash on load
+- Contact form with server-side validation, a honeypot field, and the API key kept server-side
+- Responsive layout with an accessible mobile menu
+- Scroll animations in plain CSS, disabled when the user prefers reduced motion
+- Open Graph preview image and favicon generated in code
+
+## Getting started
 
 ```bash
+npm install
+cp .env.example .env.local   # then fill in the values
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable             | Purpose                                                |
+| -------------------- | ------------------------------------------------------ |
+| `RESEND_API_KEY`     | Resend API key (server-side only)                      |
+| `CONTACT_TO_EMAIL`   | Inbox that receives contact messages                   |
+| `CONTACT_FROM_EMAIL` | Sender address; must be on a domain verified in Resend |
 
-## Learn More
+Never commit `.env.local`.
 
-To learn more about Next.js, take a look at the following resources:
+## Editing the content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Content: `src/data/portfolioData.ts`
+- Types: `src/types/`
+- Components: `src/components/`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts
 
-## Deploy on Vercel
+```bash
+npm run dev     # development server
+npm run lint    # ESLint
+npm run build   # production build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Known limitations
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The contact form has no rate limiting beyond the honeypot.
+- The theme has no separate "system" option once a user toggles it manually.

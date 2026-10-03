@@ -40,9 +40,17 @@ html {
 }
 
 .hero-grid {
-  background-image: radial-gradient(circle, rgb(113 113 122 / 0.3) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgb(113 113 122 / 0.3) 1px,
+    transparent 1px
+  );
   background-size: 24px 24px;
-  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 30%,
+    transparent 75%
+  );
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
 }
 

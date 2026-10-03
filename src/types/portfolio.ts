@@ -7,7 +7,7 @@ export interface PersonalInfo {
   email: string;
   cvUrl: string;
   contactIntro: string;
-  avatarUrl?: string; 
+  avatarUrl?: string;
 }
 
 export type SocialPlatform = "github" | "linkedin" | "email" | "website";
@@ -18,7 +18,8 @@ export interface SocialLink {
   url: string;
 }
 
-export type SkillIcon = "code" | "layers" | "test" | "design" | "tools" | "languages";
+export type SkillIcon =
+  "code" | "layers" | "test" | "design" | "tools" | "languages";
 export interface SkillCategory {
   category: string;
   icon: SkillIcon;

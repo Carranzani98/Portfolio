@@ -15,7 +15,7 @@ const errorClass = "mt-1 text-sm text-red-600 dark:text-red-400";
 export default function ContactForm() {
   const [state, formAction, pending] = useActionState(
     sendContactMessage,
-    initialState
+    initialState,
   );
   const errors = state.fieldErrors ?? {};
 

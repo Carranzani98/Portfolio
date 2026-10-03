@@ -9,21 +9,77 @@ export const portfolioData: PortfolioData = {
     location: "Barcelona, Spain",
     email: "icabo1598@gmail.com",
     cvUrl: "/cv.pdf",
-    contactIntro: "Questions, collaborations, or a chat about frontend work: send a message or find me on LinkedIn.",
-    avatarUrl: '/avatar.png',
+    contactIntro:
+      "Questions, collaborations, or a chat about frontend work: send a message or find me on LinkedIn.",
+    avatarUrl: "/avatar.png",
   },
   socials: [
-    { platform: "github", label: "GitHub", url: "https://github.com/Carranzani98" },
-    { platform: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/isabella-carranzani-borot-a540ba1b0/" },
+    {
+      platform: "github",
+      label: "GitHub",
+      url: "https://github.com/Carranzani98",
+    },
+    {
+      platform: "linkedin",
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/isabella-carranzani-borot-a540ba1b0/",
+    },
     { platform: "email", label: "Email", url: "mailto:icabo1598@gmail.com" },
   ],
   skills: [
-    { category: "Programming",icon: "code", skills: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / SCSS", "Python"] },
-    { category: "Frameworks & Libraries",icon: "layers", skills: ["React", "Redux", "Preact", "Oracle JET", "AngularJS"] },
-    { category: "Testing", icon: "test", skills: ["Jest", "React Testing Library", "Enzyme", "E2E Testing"] },
-    { category: "Design Systems & UI", icon: "design", skills: ["Storybook", "Chromatic", "Figma", "Component Libraries"] },
-    { category: "Tools & AI", icon: "tools",skills: ["Git", "Jenkins", "JIRA", "GitHub Copilot", "Codex", "ChatGPT", "Gemini"] },
-    { category: "Spoken Languages", icon: "languages", skills: ["English (advanced)", "Spanish (native)", "Catalan (native)"] },
+    {
+      category: "Programming",
+      icon: "code",
+      skills: [
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "HTML5",
+        "CSS3 / SCSS",
+        "Python",
+        "PHP",
+      ],
+    },
+    {
+      category: "Frameworks & Libraries",
+      icon: "layers",
+      skills: [
+        "React",
+        "Next.js",
+        "Redux",
+        "Preact",
+        "Oracle JET",
+        "AngularJS",
+      ],
+    },
+    {
+      category: "Testing",
+      icon: "test",
+      skills: ["Jest", "React Testing Library", "Enzyme", "E2E Testing"],
+    },
+    {
+      category: "Design Systems & UI",
+      icon: "design",
+      skills: ["Storybook", "Chromatic", "Figma", "Component Libraries"],
+    },
+    {
+      category: "Tools & AI",
+      icon: "tools",
+      skills: [
+        "Git",
+        "Docker",
+        "Jenkins",
+        "JIRA",
+        "GitHub Copilot",
+        "ChatGPT",
+        "Gemini",
+      ],
+    },
+
+    {
+      category: "Spoken Languages",
+      icon: "languages",
+      skills: ["English (advanced)", "Spanish (native)", "Catalan (native)"],
+    },
   ],
   timeline: [
     {
@@ -35,7 +91,7 @@ export const portfolioData: PortfolioData = {
       highlights: [
         "Own the Record List Template and Smart Filters, core UI components used across the platform.",
         "Deliver features end to end, covering development plus unit and E2E testing.",
-        "Use AI tools (Codex, Gemini, ChatGPT) to speed up Jest test generation, refactoring, and code review.",
+        "Use AI tools (Copilot, ChatGPT, Gemini) to speed up coding, Jest test generation, refactoring, and code review.",
         "Earlier in the role: built authentication UIs (SSO, OAuth2) with Oracle JET and led their move from a legacy architecture to a decoupled component structure.",
       ],
     },
@@ -54,7 +110,7 @@ export const portfolioData: PortfolioData = {
       organization: "Lengow",
       period: "Jan 2022 – Jul 2024",
       highlights: [
-        "Drove frontend architecture in a migration of roughly 50–60% of the legacy codebase to React and TypeScript.",
+        "Contributed to the frontend architecture of a migration of roughly 50–60% of the legacy codebase to React and TypeScript, decoupling monolithic files into reusable components.",
         "Introduced Storybook and Chromatic and built the internal component library from scratch.",
         "Maintained and optimized JavaScript, HTML, and CSS for a high-traffic SaaS platform used daily by thousands of clients.",
       ],
@@ -92,7 +148,7 @@ export const portfolioData: PortfolioData = {
         "Language-exchange web app built as my final Master's project. Full-stack, with separate backend and frontend code and a Docker Compose setup.",
       tags: ["React", "TypeScript", "Mantine UI", "PHP", "Docker", "MySQL"],
       repoUrl: "https://github.com/Carranzani98/KeepTalking",
-      image: {src: "/keeptalking-project.png", alt: "KeepTalking project"}
+      image: { src: "/keeptalking-project.png", alt: "KeepTalking project" },
     },
     {
       title: "This portfolio",
@@ -100,7 +156,7 @@ export const portfolioData: PortfolioData = {
         "My personal site: a Next.js App Router project with a data-driven content file, class-based dark mode, and a contact form backed by a Server Action.",
       tags: ["Next.js", "TypeScript", "Tailwind CSS"],
       repoUrl: "https://github.com/Carranzani98/Portfolio",
-      image: {src: "/portfolio-project.png", alt: 'Portfolio project'}
+      image: { src: "/portfolio-project.png", alt: "Portfolio project" },
     },
   ],
 };
